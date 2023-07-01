@@ -15,6 +15,7 @@ import {
   Rent,
   About,
   Acessories,
+  Footer,
 } from "./styles";
 import { Accessory } from "../../components/Accessory";
 
@@ -24,6 +25,7 @@ import forceSvg from "../../assets/force.svg";
 import gasolineSvg from "../../assets/gasoline.svg";
 import exchangeSvg from "../../assets/exchange.svg";
 import peopleSvg from "../../assets/people.svg";
+import { Button } from "../../components/Button";
 
 export function CarDetails() {
   return (
@@ -68,6 +70,10 @@ export function CarDetails() {
           para quem gosta de acelerar.
         </About>
       </Content>
+
+      <Footer>
+        <Button title="Confirmar" />
+      </Footer>
     </Container>
   );
 }
