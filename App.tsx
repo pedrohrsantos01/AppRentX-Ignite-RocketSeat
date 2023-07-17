@@ -13,11 +13,14 @@ import {
 
 import AppLoading from "expo-app-loading";
 
+import { Routes } from "./src/routes";
+
 import { CarDetails } from "./src/screens/CarDetails";
 import theme from "./src/styles/theme";
 import { Scheduling } from "./src/screens/Scheduling";
 import { SchedulingDetails } from "./src/screens/SchedulingDetails";
 import { SchedulingComplete } from "./src/screens/SchedulingComplete";
+import { GestureHandlerRootView } from "react-native-gesture-handler";
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -33,8 +36,10 @@ export default function App() {
   }
 
   return (
-    <ThemeProvider theme={theme}>
-      <SchedulingComplete />
-    </ThemeProvider>
+    <GestureHandlerRootView style={{ flex: 1 }}>
+      <ThemeProvider theme={theme}>
+        <Routes />
+      </ThemeProvider>
+    </GestureHandlerRootView>
   );
 }

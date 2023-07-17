@@ -18,6 +18,7 @@ import {
   Footer,
 } from "./styles";
 import { Accessory } from "../../components/Accessory";
+import { useNavigation } from "@react-navigation/native";
 
 import speedSvg from "../../assets/speed.svg";
 import accelerationSvg from "../../assets/acceleration.svg";
@@ -28,6 +29,12 @@ import peopleSvg from "../../assets/people.svg";
 import { Button } from "../../components/Button";
 
 export function CarDetails() {
+  const navigation = useNavigation();
+
+  function handleConfirmRental() {
+    navigation.navigate("Scheduling");
+  }
+
   return (
     <Container>
       <Header>
@@ -72,7 +79,10 @@ export function CarDetails() {
       </Content>
 
       <Footer>
-        <Button title="Confirmar" />
+        <Button
+          title="Escolher período do aluguel"
+          onPress={handleConfirmRental}
+        />
       </Footer>
     </Container>
   );

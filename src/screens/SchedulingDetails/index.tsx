@@ -29,6 +29,7 @@ import {
 import { Accessory } from "../../components/Accessory";
 import { Feather } from "@expo/vector-icons";
 import { useTheme } from "styled-components";
+import { useNavigation } from "@react-navigation/native";
 
 import speedSvg from "../../assets/speed.svg";
 import accelerationSvg from "../../assets/acceleration.svg";
@@ -41,6 +42,11 @@ import { RFValue } from "react-native-responsive-fontsize";
 
 export function SchedulingDetails() {
   const theme = useTheme();
+  const navigation = useNavigation();
+
+  function handleConfirmRental() {
+    navigation.navigate("SchedulingComplete");
+  }
 
   return (
     <Container>
@@ -114,7 +120,11 @@ export function SchedulingDetails() {
       </Content>
 
       <Footer>
-        <Button title="Confirmar" />
+        <Button
+          title="Alugar agora"
+          color={theme.colors.success}
+          onPress={handleConfirmRental}
+        />
       </Footer>
     </Container>
   );
