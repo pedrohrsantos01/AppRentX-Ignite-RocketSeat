@@ -74,7 +74,7 @@ export const Price = styled.Text`
 
 export const Rent = styled.View``;
 
-export const Acessories = styled.View`
+export const Accessories = styled.View`
   width: 100%;
 
   flex-direction: row;
