@@ -23,6 +23,7 @@ import { AntDesign } from "@expo/vector-icons";
 import { StatusBar, FlatList } from "react-native";
 import { Car } from "../../components/Car";
 
+import { LoadAnimation } from "../../components/LoadAnimation";
 import { Load } from "../../components/Load";
 
 interface CarProps {
