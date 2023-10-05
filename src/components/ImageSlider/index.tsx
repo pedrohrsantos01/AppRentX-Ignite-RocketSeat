@@ -8,6 +8,8 @@ import {
   CarImage,
 } from "./styles";
 
+import { Bullet } from "../Bullet";
+
 interface Props {
   imagesUrl: string[];
 }
@@ -29,7 +31,7 @@ export function ImageSlider({ imagesUrl }: Props) {
     <Container>
       <ImageIndexes>
         {imagesUrl.map((_, index) => (
-          <ImageIndex key={String(index)} active={index === imageIndex} />
+          <Bullet key={String(index)} active={index === imageIndex} />
         ))}
       </ImageIndexes>
 
