@@ -19,7 +19,7 @@ import { CarDetails } from "./src/screens/CarDetails";
 import theme from "./src/styles/theme";
 import { Scheduling } from "./src/screens/Scheduling";
 import { SchedulingDetails } from "./src/screens/SchedulingDetails";
-import { SchedulingComplete } from "./src/screens/SchedulingComplete";
+import { SchedulingComplete } from "./src/screens/Confirmation";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 
 export default function App() {
