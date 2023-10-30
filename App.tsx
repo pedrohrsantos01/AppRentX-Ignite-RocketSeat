@@ -19,8 +19,8 @@ import { CarDetails } from "./src/screens/CarDetails";
 import theme from "./src/styles/theme";
 import { Scheduling } from "./src/screens/Scheduling";
 import { SchedulingDetails } from "./src/screens/SchedulingDetails";
-import { SchedulingComplete } from "./src/screens/Confirmation";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
+import { AppProvider } from "./src/hooks";
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -38,7 +38,9 @@ export default function App() {
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
       <ThemeProvider theme={theme}>
-        <Routes />
+        <AppProvider>
+          <Routes />
+        </AppProvider>
       </ThemeProvider>
     </GestureHandlerRootView>
   );
