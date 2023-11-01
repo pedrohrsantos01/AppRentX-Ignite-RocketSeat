@@ -5,6 +5,7 @@ import {
   KeyboardAvoidingView,
   TouchableWithoutFeedback,
   Keyboard,
+  View,
 } from "react-native";
 import * as Yup from "yup";
 import { Container, Header, Title, SubTitle, Footer, Form } from "./styles";
@@ -48,14 +49,14 @@ export function SignIn() {
   }
 
   return (
-    <KeyboardAvoidingView behavior="position" enabled>
+    <Container>
+      <StatusBar
+        barStyle="dark-content"
+        backgroundColor="transparent"
+        translucent
+      />
       <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
-        <Container>
-          <StatusBar
-            barStyle="dark-content"
-            backgroundColor="transparent"
-            translucent
-          />
+        <View>
           <Header>
             <Title>Estamos {"\n"} quase lá</Title>
             <SubTitle>
@@ -98,8 +99,8 @@ export function SignIn() {
               loading={false}
             />
           </Footer>
-        </Container>
+        </View>
       </TouchableWithoutFeedback>
-    </KeyboardAvoidingView>
+    </Container>
   );
 }
